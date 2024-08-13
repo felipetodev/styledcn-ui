@@ -1,0 +1,16 @@
+[
+  {
+    "name": "button",
+    "files": [
+      "ui/button.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "badge",
+    "files": [
+      "ui/badge.tsx"
+    ],
+    "type": "components:ui"
+  }
+]

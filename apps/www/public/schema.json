@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "style": {
+      "type": "string",
+      "enum": ["default"]
+    },
+    "library": {
+      "type": "object",
+      "properties": {
+        "integration": {
+          "type": "string",
+          "enum": ["emotion", "styled-components", "@pandacss/dev"]
+        },
+        "css": {
+          "type": "string"
+        },
+        "baseColor": {
+          "type": "string"
+        }
+      },
+      "required": ["integration", "css", "baseColor"]
+    },
+    "rsc": {
+      "type": "boolean"
+    },
+    "tsx": {
+      "type": "boolean"
+    },
+    "aliases": {
+      "type": "object",
+      "properties": {
+        "utils": {
+          "type": "string"
+        },
+        "components": {
+          "type": "string"
+        },
+        "ui": {
+          "type": "string"
+        }
+      },
+      "required": ["utils", "components"]
+    }
+  },
+  "required": ["style", "library", "rsc", "aliases"]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "badge",
+  "files": [
+    {
+      "name": "badge.tsx",
+      "content": "\"use client\"\nimport * as React from \"react\"\nimport styled from \"styled-components\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\n\nimport { cn } from \"@/lib/utils\"\n\nconst badgeVariants = cva(\n  \"styledcn/badge\",\n  {\n    variants: {\n      variant: {\n        primary: \"primary\",\n        secondary: \"secondary\",\n        destructive: \"destructive\",\n      },\n    },\n    compoundVariants: [\n      { variant: \"primary\", className: \"badge-primary--default\" },\n      { variant: \"secondary\", className: \"badge-secondary--default\" },\n      { variant: \"destructive\", className: \"badge-destructive--default\" },\n    ],\n    defaultVariants: {\n      variant: \"primary\",\n    },\n  }\n)\n\nexport interface BadgeProps\n  extends React.HTMLAttributes<HTMLDivElement>,\n  VariantProps<typeof badgeVariants> { }\n\nconst StyledBadge = styled.div`\n  display: inline-flex;\n  justify-content: center;\n  align-items: center;\n  font-weight: 600;\n  padding: 5px 10px;\n  font-size: 12px;\n  transition: background-color 0.2s;\n  border-radius: 9999px;\n\n  &:focus-visible {\n    outline: none;\n  }\n  &:disabled {\n    pointer-events: none;\n  }\n`\n\nconst Badge = ({ className, variant, ...props }: BadgeProps) => {\n  return (\n    <StyledBadge\n      className={cn(badgeVariants({ variant }), className)}\n      {...props}\n    />\n  )\n}\n\n\nexport { Badge, StyledBadge, badgeVariants }\n"
+    }
+  ],
+  "type": "components:ui"
+}
