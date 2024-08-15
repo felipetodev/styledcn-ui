@@ -13,12 +13,14 @@ const badgeVariants = cva(
         primary: "primary",
         secondary: "secondary",
         destructive: "destructive",
+        outline: "outline",
       },
     },
     compoundVariants: [
       { variant: "primary", className: "badge-primary--default" },
       { variant: "secondary", className: "badge-secondary--default" },
       { variant: "destructive", className: "badge-destructive--default" },
+      { variant: "outline", className: "badge-outline--default" },
     ],
     defaultVariants: {
       variant: "primary",

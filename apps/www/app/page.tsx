@@ -10,6 +10,17 @@ import {
   DialogTitle,
   DialogTrigger
 } from "@/registry/default/ui/dialog";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/registry/default/ui/alert-dialog";
 
 export default function Home() {
   return (
@@ -56,30 +67,54 @@ export default function Home() {
         <Badge variant="destructive">
           Destructive
         </Badge>
+        <Badge variant="outline">
+          Outline
+        </Badge>
       </div>
-      <Dialog>
-        <DialogTrigger asChild>
-          <Button>
-            Dialog
-          </Button>
-        </DialogTrigger>
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle>Edit profile</DialogTitle>
-            <DialogDescription>
-              Make changes to your profile here. Click save when you're done.
-            </DialogDescription>
-          </DialogHeader>
+      <div style={{ display: "flex", gap: "12px" }}>
+        <Dialog>
+          <DialogTrigger asChild>
+            <Button>
+              Dialog
+            </Button>
+          </DialogTrigger>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle>Edit profile</DialogTitle>
+              <DialogDescription>
+                Make changes to your profile here. Click save when you're done.
+              </DialogDescription>
+            </DialogHeader>
 
-          <small style={{ opacity: 0.8 }}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt magni et similique, fugiat nihil ex sapiente exercitationem qui facilis mollitia commodi, necessitatibus voluptatem. Nemo quos excepturi ex minima delectus culpa?
-          </small>
+            <small style={{ opacity: 0.8 }}>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt magni et similique, fugiat nihil ex sapiente exercitationem qui facilis mollitia commodi, necessitatibus voluptatem. Nemo quos excepturi ex minima delectus culpa?
+            </small>
 
-          <DialogFooter>
-            <Button type="submit">Save changes</Button>
-          </DialogFooter>
-        </DialogContent>
-      </Dialog>
+            <DialogFooter>
+              <Button type="submit">Save changes</Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
+
+        <AlertDialog>
+          <AlertDialogTrigger asChild>
+            <Button variant="outline">Alert Dialog</Button>
+          </AlertDialogTrigger>
+          <AlertDialogContent>
+            <AlertDialogHeader>
+              <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+              <AlertDialogDescription>
+                This action cannot be undone. This will permanently delete your
+                account and remove your data from our servers.
+              </AlertDialogDescription>
+            </AlertDialogHeader>
+            <AlertDialogFooter>
+              <AlertDialogCancel>Cancel</AlertDialogCancel>
+              <AlertDialogAction>Continue</AlertDialogAction>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialog>
+      </div>
     </main>
   );
 }

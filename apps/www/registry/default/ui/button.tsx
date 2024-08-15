@@ -1,6 +1,6 @@
 "use client"
 import * as React from "react"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
@@ -41,7 +41,7 @@ export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
   VariantProps<typeof buttonVariants> { }
 
-const StyledButton = styled.button`
+const buttonCssStyles = css`
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -72,8 +72,12 @@ const StyledButton = styled.button`
   }
 
   &.outline {
-    border: 1px solid hsl(var(--input))
+    border: 1px solid hsl(var(--input));
   }
+`
+
+const StyledButton = styled.button`
+  ${buttonCssStyles}
 `
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
@@ -90,4 +94,4 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 )
 Button.displayName = "Button"
 
-export { Button, StyledButton, buttonVariants }
+export { Button, StyledButton, buttonCssStyles, buttonVariants }
