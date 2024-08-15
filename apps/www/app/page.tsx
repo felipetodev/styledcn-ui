@@ -1,6 +1,15 @@
 "use client"
 import { Badge } from "@/registry/default/ui/badge";
 import { Button, buttonVariants, StyledButton } from "@/registry/default/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger
+} from "@/registry/default/ui/dialog";
 
 export default function Home() {
   return (
@@ -45,6 +54,29 @@ export default function Home() {
           Destructive
         </Badge>
       </div>
+      <Dialog>
+        <DialogTrigger asChild>
+          <Button>
+            Dialog
+          </Button>
+        </DialogTrigger>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Edit profile</DialogTitle>
+            <DialogDescription>
+              Make changes to your profile here. Click save when you're done.
+            </DialogDescription>
+          </DialogHeader>
+
+          <small style={{ opacity: 0.8 }}>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt magni et similique, fugiat nihil ex sapiente exercitationem qui facilis mollitia commodi, necessitatibus voluptatem. Nemo quos excepturi ex minima delectus culpa?
+          </small>
+
+          <DialogFooter>
+            <Button type="submit">Save changes</Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
     </main>
   );
 }
