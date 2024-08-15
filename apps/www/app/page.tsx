@@ -39,8 +39,11 @@ export default function Home() {
         <Button variant="destructive">
           Destructive
         </Button>
+        <Button variant="outline">
+          Outline
+        </Button>
         <StyledButton className={buttonVariants()}>
-          Link with Variants
+          Button with Variants
         </StyledButton>
       </div>
       <div style={{ display: "flex", gap: "12px" }}>

@@ -76,7 +76,7 @@ body {
 }
 
 .primary:hover {
-  background-color: hsl(var(--primary)/.9)
+  background-color: hsl(var(--primary)/.9);
 }
 
 .secondary {
@@ -85,7 +85,7 @@ body {
 }
 
 .secondary:hover {
-  background-color: hsl(var(--secondary)/.8)
+  background-color: hsl(var(--secondary)/.8);
 }
 
 .destructive {
@@ -94,7 +94,16 @@ body {
 }
 
 .destructive:hover {
-  background-color: hsl(var(--destructive)/.8)
+  background-color: hsl(var(--destructive)/.8);
+}
+
+.outline {
+  background-color: hsl(var(--background));
+  border: 1px solid hsl(var(--input));
+}
+
+.outline:hover {
+  background-color: hsl(var(--accent));
 }
 
 @media (prefers-color-scheme: dark) {

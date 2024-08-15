@@ -13,6 +13,7 @@ const buttonVariants = cva(
         default: "primary",
         secondary: "secondary",
         destructive: "destructive",
+        outline: "outline",
       },
       size: {
         small: "small",
@@ -20,12 +21,14 @@ const buttonVariants = cva(
       },
     },
     compoundVariants: [
-      { variant: "default", size: "default", className: "button-default--default" },
+      { variant: "default", size: "default", className: "button-primary--default" },
       { variant: "secondary", size: "default", className: "button-secondary--default" },
       { variant: "destructive", size: "default", className: "button-destructive--default" },
-      { variant: "default", size: "small", className: "button-default--small" },
+      { variant: "outline", size: "default", className: "button-outline--default" },
+      { variant: "default", size: "small", className: "button-primary--small" },
       { variant: "secondary", size: "small", className: "button-secondary--small" },
       { variant: "destructive", size: "small", className: "button-destructive--small" },
+      { variant: "outline", size: "small", className: "button-outline--small" },
     ],
     defaultVariants: {
       variant: "default",
@@ -56,6 +59,7 @@ const StyledButton = styled.button`
   }
   &:disabled {
     pointer-events: none;
+    opacity: 0.5;
   }
   transition: background-color 0.2s;
   border-radius: var(--radius);
@@ -65,6 +69,10 @@ const StyledButton = styled.button`
   &.small {
     padding: 0.25rem 0.5rem;
     height: 2rem;
+  }
+
+  &.outline {
+    border: 1px solid hsl(var(--input))
   }
 `
 
