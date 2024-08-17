@@ -1,6 +1,7 @@
 "use client"
 import { Badge } from "@/registry/default/ui/badge";
 import { Button, buttonVariants, StyledButton } from "@/registry/default/ui/button";
+import { Input } from "@/registry/default/ui/input";
 import {
   Dialog,
   DialogContent,
@@ -37,7 +38,7 @@ export default function Home() {
           styledcn/ui - CSS in JS shadcn based ✨
         </h1>
         <small style={{ opacity: 0.6 }}>
-          (framework agnostic)
+          CSS framework agnostic
         </small>
       </div>
       <div style={{ display: "flex", gap: "12px" }}>
@@ -114,6 +115,10 @@ export default function Home() {
             </AlertDialogFooter>
           </AlertDialogContent>
         </AlertDialog>
+      </div>
+      <div style={{ display: "grid", gap: "10px", maxWidth: "20rem" }}>
+        <Input type="email" placeholder="Email" />
+        <Input type="file" />
       </div>
     </main>
   );
