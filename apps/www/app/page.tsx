@@ -2,6 +2,7 @@
 import { Badge } from "@/registry/default/ui/badge";
 import { Button, buttonVariants, StyledButton } from "@/registry/default/ui/button";
 import { Input } from "@/registry/default/ui/input";
+import { Label } from "@/registry/default/ui/label";
 import {
   Dialog,
   DialogContent,
@@ -117,8 +118,11 @@ export default function Home() {
         </AlertDialog>
       </div>
       <div style={{ display: "grid", gap: "10px", maxWidth: "20rem" }}>
+        <div style={{ display: "grid", gap: "0.375rem", alignItems: "center" }}>
+          <Label htmlFor="picture">Picture</Label>
+          <Input id="picture" type="file" />
+        </div>
         <Input type="email" placeholder="Email" />
-        <Input type="file" />
       </div>
     </main>
   );
