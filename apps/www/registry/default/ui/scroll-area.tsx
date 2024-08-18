@@ -38,14 +38,10 @@ ScrollArea.displayName = ScrollAreaPrimitive.Root.displayName
 const scrollBarVariants = cva("styledcn/scroll", {
   variants: {
     variant: {
-      vertical: "vertical",
-      horizontal: "horizontal",
+      vertical: "scroll-vertical",
+      horizontal: "scroll-horizontal",
     },
   },
-  compoundVariants: [
-    { variant: "vertical", className: "scroll-vertical" },
-    { variant: "horizontal", className: "scroll-horizontal" },
-  ],
   defaultVariants: {
     variant: "vertical",
   },
