@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import { Command } from "commander"
 import { init } from "@/src/commands/init"
+import { add } from "@/src/commands/add"
 
 process.on("SIGINT", () => process.exit(0))
 process.on("SIGTERM", () => process.exit(0))
@@ -15,7 +16,7 @@ async function main() {
       "display the version number"
     )
 
-  program.addCommand(init)
+  program.addCommand(init).addCommand(add)
 
   program.parse()
 }

@@ -149,7 +149,7 @@ export async function promptForConfig(
   ])
 
   const config = rawConfigSchema.parse({
-    $schema: "https://ui.shadcn.com/schema.json",
+    $schema: "https://styledcn-ui.vercel.app/schema.json",
     style: options.style,
     library: {
       integration: options.integration,
